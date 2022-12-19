@@ -10,7 +10,7 @@ class User < ApplicationRecord
   validates :full_name,
             length: { minimum: 3, message: 'fields can not be less than 3 letters' }
   validates :email,
-            uniqueness: true, message: 'Email already exists'
+            uniqueness: true
   validates :password,
             length: { minimum: 6, message: 'Password can not be less than 6 characters' }
 end
