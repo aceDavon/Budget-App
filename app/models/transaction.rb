@@ -1,6 +1,6 @@
 class Transaction < ApplicationRecord
   belongs_to :category
-  belongs_to :User
+  belongs_to :user
 
   validates :name,
             length: { minimum: 3, message: 'fields can not be less than 3 letters' }

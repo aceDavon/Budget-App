@@ -4,7 +4,7 @@ class TransactionsController < ApplicationController
 
   # GET /transactions or /transactions.json
   def index
-    @transactions = Transaction.all
+    @transactions = Transaction.where(user_id: current_user.id)
   end
 
   # GET /transactions/1 or /transactions/1.json
@@ -23,6 +23,8 @@ class TransactionsController < ApplicationController
   # POST /transactions or /transactions.json
   def create
     @transaction = Transaction.new(transaction_params)
+    @transaction.user_id = current_user.id
+    @transaction.category_id = params[:category][:id]
 
     respond_to do |format|
       if @transaction.save
