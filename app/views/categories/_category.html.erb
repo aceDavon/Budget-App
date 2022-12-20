@@ -1,17 +1,21 @@
-<div id="<%= dom_id category %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Name:</strong>
-    <%= category.name %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Icon:</strong>
-    <%= category.icon %>
-  </p>
-
-  <% if action_name != "show" %>
-    <%= link_to "Show this category", category, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to 'Edit this category', edit_category_path(category), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-    <hr class="mt-6">
-  <% end %>
+<div id="<%= dom_id category %>" class="my-5">
+    <div class="flex justify-between border border-gray-200 rounded-md p-2">
+    <div class="w-8/12 flex gap-2">
+      <div class="my-5">
+        <img src="<%= category.icon %>" alt="<%= category.icon %>" class="w-8 h-auto object-contain rounded-lg">
+      </div>
+      <div class="my-5">
+        <%= link_to category.name, category %>
+      </div>
+    </div>
+    <div class="flex w-4/12">
+      <div class="my-5 mr-12 font-bold">
+        <% category.transactions.each do |transaction| %>
+          <p>$<%= transaction.amount %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+    
+  <hr class="mt-6">
 </div>
