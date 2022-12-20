@@ -75,3 +75,5 @@ group :test do
 end
 
 gem "devise", "~> 4.8"
+
+gem "date_format", "~> 0.3.3"

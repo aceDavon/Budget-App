@@ -1,5 +1,6 @@
 class Category < ApplicationRecord
   has_many :transactions
+  belongs_to :user
 
   validates :name,
             length: { minimum: 3, message: 'fields can not be less than 3 letters' }

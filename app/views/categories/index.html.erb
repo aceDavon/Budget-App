@@ -1,14 +1,19 @@
-<div class="w-full md:w-2/3 mx-auto">
-  <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-  <% end %>
+<div class="flex flex-col gap-1 w-full">
+ <h2 class="bg-blue-800 text-center py-4 text-white">
+  <i class="fa-solid fa-arrow-left float-left mt-1 ml-2"></i>
+  <span class="-ml-4">Categories</span>
+  </h2>
+  <div class="w-full mx-auto">
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% end %>
 
-  <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Categories</h1>
-    <%= link_to 'New category', new_category_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
-  </div>
+    <div id="categories" class="min-w-full">
+      <%= render @categories %>
+    </div>
 
-  <div id="categories" class="min-w-full">
-    <%= render @categories %>
+    <div class="flex justify-between items-center">
+      <%= link_to 'New category', new_category_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+    </div>
   </div>
 </div>
