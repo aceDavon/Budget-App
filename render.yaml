@@ -5,7 +5,6 @@ services:
   - type: web
     name: Budget_app
     env: ruby
-    plan: free
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
