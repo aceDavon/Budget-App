@@ -1,7 +1,5 @@
 databases:
   - name: Budget_app
-    databaseName: budget_app
-    user: budget
 
 services:
   - type: web
