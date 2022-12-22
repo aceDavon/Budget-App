@@ -14,14 +14,14 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="w-1/2 mx-auto bg-gray-100">
+  <body class="mx-auto bg-gray-100">
     <header class="w-full">
       <% if current_user %>
         <%= render "layouts/header" %>
       <% end %>
       <%= render "layouts/notif" %>
     </header>
-    <main class="container w-full flex justify-center">
+    <main class="w-full flex justify-center">
       <%= yield %>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
