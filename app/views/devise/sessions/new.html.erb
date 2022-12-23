@@ -6,11 +6,11 @@
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="my-1">
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', class: 'border-none focus:border-none bg-white' %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', class: 'border-none focus:border-none bg-white text-gray-800' %>
     </div>
 
     <div class="my-1">
-      <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password', class: 'border-none focus:border-none bg-white' %>
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password', class: 'border-none focus:border-none bg-white text-gray-800' %>
     </div>
 
     <div class="actions">

@@ -1,0 +1,15 @@
+<div id="<%= dom_id transaction %>">
+    <tr class="border-b-2">
+      <td><%= transaction.name %></td>
+      <td><%= transaction.amount %></td>
+      <td>
+        <%= button_to 'Delete', transaction_path(transaction), method: :delete, class: "rounded-lg my-6 px-2 bg-red-500 text-xs" %>
+      </td>
+    </tr>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this transaction", transaction, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this transaction', edit_transaction_path(transaction), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

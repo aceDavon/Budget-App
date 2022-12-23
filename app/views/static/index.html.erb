@@ -2,8 +2,10 @@
   <h1 class="font-bold capitalize text-4xl mt-44">
     welcome
   </h1>
-  <div class="text-center w-full absolute bottom-8 px-4">
-  <%= link_to "Login", new_user_session_path, class: 'bg-blue-600 py-1 w-full block' %>
-  <%= link_to "Register", new_user_registration_path, class: 'py-1 w-full block' %>
-  </div>
+  <% unless current_user %>
+    <div class="text-center w-full absolute bottom-8 px-4">
+      <%= link_to "Login", new_user_session_path, class: 'bg-blue-600 py-1 w-full block' %>
+      <%= link_to "Register", new_user_registration_path, class: 'py-1 w-full block' %>
+    </div>
+  <% end %>
 </div>

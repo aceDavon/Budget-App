@@ -83,7 +83,7 @@
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live Demo <a name="live-demo">https://budget-website.herokuapp.com/</a>
 
 - in progress :smile: [Live Demo Link](https://yourdeployedapplicationlink.com)
 
@@ -165,6 +165,8 @@ Give a ⭐️ if you like this project!
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
 
 I would like to thank:
 
